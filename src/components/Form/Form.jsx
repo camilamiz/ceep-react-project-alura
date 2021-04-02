@@ -4,7 +4,7 @@ import './style.css';
 class Form extends Component {
   render() {
     return(
-      <form className="form-cadastro">
+      <form className="form">
         <input
           type="text"
           placeholder="Title"
