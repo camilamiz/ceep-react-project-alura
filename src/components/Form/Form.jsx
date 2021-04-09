@@ -21,6 +21,8 @@ class Form extends Component {
   _createNote(event) {
     event.preventDefault();
     event.stopPropagation();
+
+    if (this.title === "" && this.text === "") return;
     this.props.createNote(this.title, this.text);
   }
 
@@ -42,7 +44,7 @@ class Form extends Component {
           className="form_input"
           onChange={this._handleTextChange.bind(this)}
         />
-        <button className="form_input form_submit">
+        <button className="form_input form_submit" >
           Create note
         </button>
       </form>
